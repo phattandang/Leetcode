@@ -3,21 +3,21 @@ class Solution {
         int i = 0;
         int j = 0;
         int k = 1;
-        while (j < nums.length) {
-            if (nums[j] == 0) {
+        while(j < nums.length) {
+            if(nums[j] == 0) {
                 j++;
                 k--;
-                if (k < 0) {
+                if(k < 0) {
                     i++;
-                    if (nums[i - 1] == 0) {
+                    if(nums[i - 1] == 0) {
                         k++;
                     }
                 }
             } else {
                 j++;
-                if (k < 0) {
+                if(k < 0) {
                     i++;
-                    if (nums[i - 1] == 0) {
+                    if(nums[i - 1] == 0) {
                         k++;
                     }
                 }
