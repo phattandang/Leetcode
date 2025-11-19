@@ -24,24 +24,24 @@ class Solution {
     public boolean isLeaf(TreeNode cur) {
         return(cur.left == null && cur.right == null);
     }
-    public boolean isRightBoundary(int flag) {
-        return(flag == 2);
-    }
     public boolean isLeftBoundary(int flag) {
         return(flag == 1);
+    }
+    public boolean isRightBoundary(int flag) {
+        return(flag == 2);
     }
     public boolean isRoot(int flag) {
         return(flag == 0);
     }
     public int leftChildFlag(TreeNode cur, int flag) {
-        if(isLeftBoundary(flag) || isRoot(flag))           return 1;
-        else if(isRightBoundary (flag) && cur.right == null) return 2;
-        else                                               return 3;
+        if(isLeftBoundary(flag) || isRoot(flag)) return 1;
+        else if(isRightBoundary(flag) && cur.right == null) return 2;
+        else return 3;
     }
     public int rightChildFlag(TreeNode cur, int flag) {
-        if(isRightBoundary(flag) || isRoot(flag))           return 2;
-        else if(isLeftBoundary (flag) && cur.left == null) return 1;
-        else                                               return 3;
+        if(isRightBoundary(flag) || isRoot(flag)) return 2;
+        else if(isLeftBoundary(flag) && cur.left == null) return 1;
+        else return 3;
     }
     public void preorder(TreeNode cur, List<Integer> left_boundary, List<Integer> right_boundary, List<Integer> leaves, int flag) {
         if(cur == null) return;
