@@ -1,5 +1,5 @@
 class Solution {
-    public static final int[][] dirs = {{0, 1}, {1, 0}, {-1, 0}, {0, - 1}};
+    public static final int[][] dirs = {{0, 1}, {1, 0}, {-1, 0}, {0, -1}};
     public int numIslands(char[][] grid) {
         int ROWS = grid.length;
         int COLS = grid[0].length;
