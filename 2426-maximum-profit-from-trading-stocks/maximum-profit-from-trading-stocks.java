@@ -11,7 +11,7 @@ class Solution {
                 continue;
             }
             for(int b = budget; b >= cost; b--) {
-                dp[b] = Math.max(dp[b], dp[b- cost] + profit);
+                dp[b] = Math.max(dp[b], dp[b - cost] + profit);
             }
         }
         return dp[budget];
