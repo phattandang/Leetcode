@@ -4,17 +4,18 @@ public class TrieNode {
 
     public TrieNode() {
         this.children = new HashMap<>();
-        this.endOfWord = false;
+        this.endOfWord = false;    
     }
+    
 }
 
 class Trie {
     private TrieNode root;
-
+    
     public Trie() {
         this.root = new TrieNode();
     }
-    
+
     public void insert(String word) {
         TrieNode cur = root;
         for(char c : word.toCharArray()) {
